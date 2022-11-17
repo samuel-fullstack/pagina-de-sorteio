@@ -5,27 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <H1>SORTEIO</H1>
 
-    <div id="sortear" onclick="sortear(this)">
-        Clique aqui
+    <h1>SORTEIO</h1>
+    
+    <div id="sortear" onclick="sortear()">
+        ???
     </div>
-    <button id="botao-config" onclick="abrirConfig()">
-        configurar
-    </button>
+    <!-- botoes -->
 
-<!-- configuração oculta -->
-    <div id="config">
+    <div id="botoes">
 
-        <div class="head-config">
-            <h3>Configuração</h3>
-            <span onclick="fechaConfig()">fechar</span>
+        <button class="sorteio" onclick="sortear()">Sortear</button>
+
+        <div class="bt-config" id="botao-config" onclick="abrirConfig()">
+            <img src="assets/imgs/configuracoes.png" alt="">
         </div>
 
     </div>
-    <script src="script.js"></script>
+
+    <!-- configurações -->
+    <div id="config-container">
+
+        <div class="head-config">
+            <h3>Configuração</h3>
+            <span onclick="fechaConfig()">Aplicar</span>
+        </div>
+
+        <div class="config">
+            <label for="n-Pessoas">Valor Maximo: 
+                <input type="number" value="100" min="2" max="1000" id="valor-max" class="numero-pessoas">
+            </label>
+        </div>
+
+    </div>
+    <script src="assets/script/script.js"></script>
 </body>
 </html>
